@@ -98,6 +98,7 @@ main{
 #menu-gradient{
     background: -webkit-linear-gradient(left, #909090, transparent);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     }
 
@@ -109,6 +110,9 @@ main{
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 22px;
     border: 1px solid #252930;
     background: #FFF;
