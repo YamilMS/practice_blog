@@ -1,5 +1,3 @@
-console.log("Hola perro")
-
 const numberOfCards = document.querySelectorAll('.card').length;
 const cardsPerPage = 9;
 let pageNumber = 1;
@@ -62,6 +60,7 @@ showCards();
 // Logic that change the display to a grid or a list of cards
 let cardContainer = document.querySelector(".grid-container")
 
+//Put the grid container showing 3 cloumns
 let displayInGrid = document.querySelector(".display-in-grid")
 displayInGrid.onclick = function(event) {
     event.preventDefault();
@@ -73,7 +72,8 @@ displayInGrid.onclick = function(event) {
         images[i].style.height = null;  
     }
 }
-
+//Put the grid container showing 1 column like a list, also reduce the size of each column to the half of the parent
+// and place it in the middle
 let displayInList = document.querySelector(".display-in-list")
 displayInList.onclick = function(event) {
     event.preventDefault();
