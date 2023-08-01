@@ -187,7 +187,6 @@ main{
     display: inline-block;
     margin: 4px 2px;
     transition-duration: 0.4s;
-    border-radius: 5px;
     color: #909090;
     font-family: Recursive;
     font-size: 25px;
@@ -196,12 +195,21 @@ main{
     line-height: normal;
 }
 
+.button.active{
+    color: #FF7575;
+    font-family: Recursive;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    border-top: solid 3px #FF7575;
+    padding-top: 10px;
+}
+
 .pagination button:hover {
     background-color: #4CAF50; 
     color: white;
 }
-
-
 
 
 footer{
@@ -238,4 +246,27 @@ footer{
     border-radius: 5px;
     background: #4699E0;
     padding: 5px;
+}
+
+.github-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-header{
+     color: #FF7575;
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.github-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
 }

@@ -21,6 +21,7 @@ pagination.appendChild(previousBtn)
 //Then the page numbers
 for (let i = 1; i <= totalPages; i++) {
     let btn = document.createElement('button');
+    btn.classList.add(`button`);
     btn.innerText = i;
     btn.onclick = function() {
         pageNumber = this.innerText;
@@ -43,6 +44,8 @@ pagination.appendChild(nextBtn)
 
 // Function that show the cards
 function showCards() {
+
+    //Show the pages that belong to each page
     const cards = document.querySelectorAll('.card');
     for (let i = 0; i < numberOfCards; i++) {
         if (i >= (pageNumber - 1) * cardsPerPage && i < pageNumber * cardsPerPage) {
@@ -51,7 +54,18 @@ function showCards() {
             cards[i].style.display = 'none';
         }
     }
-}
+
+    //Put the active class on the current page button
+    const buttons = document.querySelectorAll('.button');
+    for(let j=0; j<buttons.length; j++) {
+        if(buttons[j].innerText == pageNumber) {
+            buttons[j].classList.add('active');
+        }else {
+            buttons[j].classList.remove('active');
+        }
+        }
+    }
+
 
 // Show first page
 showCards();
