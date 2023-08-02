@@ -11,8 +11,10 @@ const pagination = document.querySelector('.pagination');
 //NPM daysjs library to format the date
 const today = dayjs().format('DD/MM/YYYY');
 console.log(today);
-// Create page buttons
+document.querySelector('.test').innerHTML= today
 
+
+// Create page buttons
 //FIRST the previous button
 let previousBtn = document.createElement('button');
 previousBtn.innerText = "Previous";
