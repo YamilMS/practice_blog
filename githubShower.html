@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2</title>
+    <title>Search GitHub Users</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="icon" href="img/Logo_resized.png" type="image/x-icon">
 </head>
@@ -66,8 +66,8 @@
                         </svg>
                 </a>
             </div>
-            <a href="githubShower.html">Github</a>
-            <a href="https://google.com" target="_blank">JavaScript</a>
+            <a href="./dist/index.html">Blog</a>
+            <a href="npm.html">NPM</a>
             <a href="">Cloud</a>
             <a href="">DevOps</a>
             <a href="">Coding</a>
@@ -78,8 +78,8 @@
         <section>
             <div class="github-container">
                 <h1 class="github-header"> Search GitHub Users information</h1>
-                <form class="github-form" action="https://api.github.com/users/">
-                    <input type="text" name="GitHub-Usename" placeholder="Type the github username here">
+                <form id="get-form" class="github-form">
+                    <input type="text" name="GitHub-Usename" id="get-usename" placeholder="Type the github username here" required>
                     <button type="submit">Submit</button>
                 </form>
             </div>
@@ -105,6 +105,6 @@
         </div>
     </footer>
 
-    <script src="./js/githubShower.js"></script>
+    <script src="./src/githubShower.js"></script>
 </body>
 </html>

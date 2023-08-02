@@ -1,0 +1,20 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "Full-stack project",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Yamil MS",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.11.9",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
