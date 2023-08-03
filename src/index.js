@@ -1,18 +1,15 @@
 import _ from 'lodash';
-const dayjs = require('dayjs')
+const dayjs = require('dayjs');
+const advancedFormat = require('dayjs/plugin/advancedFormat');
+const localeData = require('dayjs/plugin/localeData');
+const esLocale = require('dayjs/locale/es');  // suponiendo que deseas el formato en español
+
 
 const numberOfCards = document.querySelectorAll('.card').length;
 const cardsPerPage = 9;
 let pageNumber = 1;
 const totalPages = Math.ceil(numberOfCards / cardsPerPage);
 const pagination = document.querySelector('.pagination');
-
-
-//NPM daysjs library to format the date
-const today = dayjs().format('DD/MM/YYYY');
-console.log(today);
-document.querySelector('.test').innerHTML= today
-
 
 // Create page buttons
 //FIRST the previous button
@@ -80,6 +77,7 @@ function showCards() {
 showCards();
 
 
+
 // Logic that change the display to a grid or a list of cards
 let cardContainer = document.querySelector(".grid-container")
 
@@ -108,4 +106,14 @@ displayInList.onclick = function(event) {
         images[i].style.height = "300px"
     }
 }
+
+dayjs.extend(advancedFormat);
+dayjs.extend(localeData);
+dayjs.locale('es', esLocale);
+
+ 
+let now = dayjs().format('HH:mm:ss dddd, DD [de] MMMM, YYYY');
+console.log(now);
+document.querySelector('.test').innerHTML= `${now}`;
+
 
