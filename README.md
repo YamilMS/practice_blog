@@ -6,6 +6,8 @@ https://www.figma.com/file/nh0V05z3NB87ue9v5PcO3R/writings.dev?node-id=39%3A41&m
 
 
 Here is a snapshot of the goal design:
+
+
 ![image](https://github.com/YamilMS/practice_blog/assets/107116234/1bf6927b-f387-493f-9e19-1d31a986969b)
 
 Also implement npm, using modules with webpack. This was done using dayjs in order to display a real time local clock on the blog
