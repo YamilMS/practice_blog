@@ -114,6 +114,6 @@ dayjs.locale('es', esLocale);
  
 let now = dayjs().format('HH:mm:ss dddd, DD [de] MMMM, YYYY');
 console.log(now);
-document.querySelector('.test').innerHTML= `${now}`;
+document.querySelector('.clock').innerHTML= `${now}`;
 
 
